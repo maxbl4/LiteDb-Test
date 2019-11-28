@@ -1,3 +1,5 @@
+using System;
+using System.IO;
 using LiteDB;
 using Xunit;
 
@@ -24,9 +26,30 @@ namespace LiteDB5Test
         [Fact]
         public void Double()
         {
+            var r = new Random();
+            if (File.Exists(nameof(Double)))
+                File.Delete(nameof(Double));
             using var repo = new LiteRepository(nameof(Double));
-            repo.Insert(new RecordDouble());
-            Assert.Equal(5.5, repo.Query<RecordDouble>().First().Double, 1);
+            for (int i = 1; i < 1000; i++)
+            {
+                var d = r.NextDouble() * 100;
+                CheckDoubleValue(repo, d);
+            }
+            
+            CheckDoubleValue(repo, double.Epsilon);
+            CheckDoubleValue(repo, double.MinValue);
+            CheckDoubleValue(repo, double.MaxValue);
+            CheckDoubleValue(repo, double.NegativeInfinity);
+            CheckDoubleValue(repo, double.PositiveInfinity);
+            CheckDoubleValue(repo, 1d/3d);
+            CheckDoubleValue(repo, 100d/7d);
+        }
+
+        void CheckDoubleValue(LiteRepository repo, double v)
+        {
+            Console.WriteLine(v);
+            repo.Insert(new RecordDouble{ Double = v});
+            Assert.Equal(v, repo.Query<RecordDouble>().OrderByDescending(x => x.Id).First().Double);
         }
         
         [Fact]
