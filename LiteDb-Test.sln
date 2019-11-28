@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteDB4Test", "LiteDB4Test\LiteDB4Test.csproj", "{9C07BAE2-E89B-4981-B992-FB9A634669BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteDB5Test", "LiteDB5Test\LiteDB5Test.csproj", "{D41EB25E-C2E0-4E3A-AEFA-253F9F9C6262}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C07BAE2-E89B-4981-B992-FB9A634669BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C07BAE2-E89B-4981-B992-FB9A634669BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C07BAE2-E89B-4981-B992-FB9A634669BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C07BAE2-E89B-4981-B992-FB9A634669BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D41EB25E-C2E0-4E3A-AEFA-253F9F9C6262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41EB25E-C2E0-4E3A-AEFA-253F9F9C6262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41EB25E-C2E0-4E3A-AEFA-253F9F9C6262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41EB25E-C2E0-4E3A-AEFA-253F9F9C6262}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
